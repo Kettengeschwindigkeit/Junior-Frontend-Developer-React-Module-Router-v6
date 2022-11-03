@@ -1,13 +1,16 @@
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { logOut } from "../store/authSlice";
+
 const useLogout = () => {
-    // const history = useHistory();
     const dispatch = useDispatch();
+    const navigate = useNavigate();
+
     const handleLoguot = () =>
         dispatch(logOut())
             .unwrap()
             .then(() => {
-                // history.push("/");
+                navigate("/");
             })
             .catch(() => {
                 window.location.reload();

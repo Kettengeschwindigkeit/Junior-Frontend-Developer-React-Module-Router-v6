@@ -1,4 +1,5 @@
 import React from "react";
+
 const BackgroundGradiend = () => {
 	return (
 		<div className="absolute z-20 top-0 inset-x-0 flex justify-center overflow-hidden pointer-events-none">
